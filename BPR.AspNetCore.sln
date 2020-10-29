@@ -7,7 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{8CFFF9
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BPR.AspNetCore.Entity", "BPR.AspNetCore.Entity\BPR.AspNetCore.Entity.csproj", "{C98E7ED4-1E36-4B0D-AFDD-5C67ACC8B0B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BPR.AspNetCore.Repository", "BPR.AspNetCore.Repository\BPR.AspNetCore.Repository.csproj", "{3DD05D4E-99CA-49DD-B9E9-A547FAF7CAD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BPR.AspNetCore.Repository", "BPR.AspNetCore.Repository\BPR.AspNetCore.Repository.csproj", "{3DD05D4E-99CA-49DD-B9E9-A547FAF7CAD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BPR.AspNetCore.EF", "BPR.AspNetCore.EF\BPR.AspNetCore.EF.csproj", "{02369117-F48C-41F8-A123-4074C1FC7907}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{3DD05D4E-99CA-49DD-B9E9-A547FAF7CAD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DD05D4E-99CA-49DD-B9E9-A547FAF7CAD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DD05D4E-99CA-49DD-B9E9-A547FAF7CAD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02369117-F48C-41F8-A123-4074C1FC7907}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02369117-F48C-41F8-A123-4074C1FC7907}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02369117-F48C-41F8-A123-4074C1FC7907}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02369117-F48C-41F8-A123-4074C1FC7907}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +36,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{C98E7ED4-1E36-4B0D-AFDD-5C67ACC8B0B4} = {8CFFF904-AB1D-446A-9126-8DED42E19CD4}
 		{3DD05D4E-99CA-49DD-B9E9-A547FAF7CAD7} = {8CFFF904-AB1D-446A-9126-8DED42E19CD4}
+		{02369117-F48C-41F8-A123-4074C1FC7907} = {8CFFF904-AB1D-446A-9126-8DED42E19CD4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CDD70AE4-725E-40BF-B9E0-E46A0EF5D8BC}
