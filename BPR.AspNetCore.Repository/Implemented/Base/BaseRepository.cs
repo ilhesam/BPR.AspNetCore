@@ -4,6 +4,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using BPR.AspNetCore.EF;
 using BPR.AspNetCore.Entity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -11,17 +12,17 @@ using Microsoft.Extensions.Logging;
 namespace BPR.AspNetCore.Repository
 {
     public abstract class BaseRepository<TEntity, TContext> : IBaseRepository<TEntity>
-        where TContext : DbContext
+        where TContext : BprDbContext
         where TEntity : BaseEntity
     {
         protected readonly TContext Database;
-        protected readonly DbSet<TEntity> Table;
+        protected readonly BprDbSet<TEntity> Table;
         protected readonly ILogger<TEntity> Logger;
 
         protected BaseRepository(TContext database, ILogger<TEntity> logger)
         {
             Database = database;
-            Table = Database.Set<TEntity>();
+            Table = Database.Set<TEntity>() as BprDbSet<TEntity>;
             Logger = logger;
         }
 
@@ -328,7 +329,7 @@ namespace BPR.AspNetCore.Repository
     public abstract class BaseRepository<TEntity, TKey, TContext> : BaseRepository<TEntity, TContext>,
         IBaseRepository<TEntity, TKey>
         where TEntity : BaseEntity<TKey>
-        where TContext : DbContext
+        where TContext : BprDbContext
     {
         protected BaseRepository(TContext database, ILogger<TEntity> logger) : base(database, logger)
         {

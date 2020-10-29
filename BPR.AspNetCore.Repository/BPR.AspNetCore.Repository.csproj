@@ -5,11 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.9" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\BPR.AspNetCore.Entity\BPR.AspNetCore.Entity.csproj" />
+    <ProjectReference Include="..\BPR.AspNetCore.EF\BPR.AspNetCore.EF.csproj" />
   </ItemGroup>
 
 </Project>
