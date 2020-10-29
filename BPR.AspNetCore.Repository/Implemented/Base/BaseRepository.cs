@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BPR.AspNetCore.Entity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace BPR.AspNetCore.Repository
 {
@@ -15,6 +16,7 @@ namespace BPR.AspNetCore.Repository
     {
         protected readonly TContext Database;
         protected readonly DbSet<TEntity> Table;
+        protected readonly ILogger<TEntity> Logger;
 
         public BaseRepository(TContext database)
         {
@@ -31,6 +33,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult<IQueryable<TEntity>>.Fail(e);
             }
         }
@@ -58,6 +61,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult<IQueryable<TEntity>>.Fail(e);
             }
         }
@@ -71,6 +75,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult<IQueryable<TEntity>>.Fail(e);
             }
         }
@@ -84,6 +89,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult<IQueryable<TEntity>>.Fail(e);
             }
         }
@@ -97,6 +103,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult<IQueryable<TEntity>>.Fail(e);
             }
         }
@@ -113,6 +120,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult<TEntity>.Fail(e);
             }
         }
@@ -134,6 +142,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult<TEntity>.Fail(e);
             }
         }
@@ -155,6 +164,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult<TEntity>.Fail(e);
             }
         }
@@ -168,6 +178,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult<TEntity>.Fail(e);
             }
         }
@@ -181,6 +192,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult.Fail(e);
             }
         }
@@ -194,6 +206,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult<TEntity>.Fail(e);
             }
         }
@@ -207,6 +220,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult.Fail(e);
             }
         }
@@ -220,6 +234,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult<TEntity>.Fail(e);
             }
         }
@@ -240,6 +255,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult<TEntity>.Fail(e);
             }
         }
@@ -253,6 +269,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult.Fail(e);
             }
         }
@@ -273,6 +290,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult.Fail(e);
             }
         }
@@ -286,6 +304,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult<bool>.Fail(e);
             }
         }
@@ -299,6 +318,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult<int>.Fail(e);
             }
         }
@@ -322,6 +342,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult<TEntity>.Fail(e);
             }
         }
@@ -335,6 +356,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult<TEntity>.Fail(e);
             }
         }
@@ -348,6 +370,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult<TEntity>.Fail(e);
             }
         }
@@ -361,6 +384,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult<TEntity>.Fail(e);
             }
         }
@@ -374,6 +398,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult.Fail(e);
             }
         }
@@ -387,6 +412,7 @@ namespace BPR.AspNetCore.Repository
             }
             catch (Exception e)
             {
+                Logger.LogError(e.Message);
                 return BprOperationResult<bool>.Fail(e);
             }
         }
