@@ -18,10 +18,10 @@ namespace BPR.AspNetCore.Repository
         protected readonly DbSet<TEntity> Table;
         protected readonly ILogger<TEntity> Logger;
 
-        public BaseRepository(TContext database, DbSet<TEntity> table, ILogger<TEntity> logger)
+        public BaseRepository(TContext database, ILogger<TEntity> logger)
         {
             Database = database;
-            Table = table;
+            Table = Database.Set<TEntity>();
             Logger = logger;
         }
 
@@ -330,7 +330,7 @@ namespace BPR.AspNetCore.Repository
         where TEntity : BaseEntity<TKey>
         where TContext : DbContext
     {
-        public BaseRepository(TContext database) : base(database)
+        public BaseRepository(TContext database, ILogger<TEntity> logger) : base(database, logger)
         {
         }
 
