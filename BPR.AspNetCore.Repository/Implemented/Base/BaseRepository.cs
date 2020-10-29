@@ -18,10 +18,11 @@ namespace BPR.AspNetCore.Repository
         protected readonly DbSet<TEntity> Table;
         protected readonly ILogger<TEntity> Logger;
 
-        public BaseRepository(TContext database)
+        public BaseRepository(TContext database, DbSet<TEntity> table, ILogger<TEntity> logger)
         {
             Database = database;
-            Table = Database.Set<TEntity>();
+            Table = table;
+            Logger = logger;
         }
 
         public BprOperationResult<IQueryable<TEntity>> GetAll(bool tracking = false)
