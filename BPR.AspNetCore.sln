@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{8CFFF904-AB1D-446A-9126-8DED42E19CD4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BPR.AspNetCore.Entity", "BPR.AspNetCore.Entity\BPR.AspNetCore.Entity.csproj", "{C98E7ED4-1E36-4B0D-AFDD-5C67ACC8B0B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BPR.AspNetCore.Entity", "Source\BPR.AspNetCore.Entity\BPR.AspNetCore.Entity.csproj", "{C98E7ED4-1E36-4B0D-AFDD-5C67ACC8B0B4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BPR.AspNetCore.Repository", "BPR.AspNetCore.Repository\BPR.AspNetCore.Repository.csproj", "{3DD05D4E-99CA-49DD-B9E9-A547FAF7CAD7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BPR.AspNetCore.Repository", "Source\BPR.AspNetCore.Repository\BPR.AspNetCore.Repository.csproj", "{3DD05D4E-99CA-49DD-B9E9-A547FAF7CAD7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BPR.AspNetCore.EF", "BPR.AspNetCore.EF\BPR.AspNetCore.EF.csproj", "{02369117-F48C-41F8-A123-4074C1FC7907}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BPR.AspNetCore.EF", "Source\BPR.AspNetCore.EF\BPR.AspNetCore.EF.csproj", "{02369117-F48C-41F8-A123-4074C1FC7907}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
