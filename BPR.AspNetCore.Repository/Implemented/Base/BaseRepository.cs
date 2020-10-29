@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 
 namespace BPR.AspNetCore.Repository
 {
-    public class BaseRepository<TEntity, TContext> : IBaseRepository<TEntity>
+    public abstract class BaseRepository<TEntity, TContext> : IBaseRepository<TEntity>
         where TContext : DbContext
         where TEntity : BaseEntity
     {
@@ -18,7 +18,7 @@ namespace BPR.AspNetCore.Repository
         protected readonly DbSet<TEntity> Table;
         protected readonly ILogger<TEntity> Logger;
 
-        public BaseRepository(TContext database, ILogger<TEntity> logger)
+        protected BaseRepository(TContext database, ILogger<TEntity> logger)
         {
             Database = database;
             Table = Database.Set<TEntity>();
@@ -325,12 +325,12 @@ namespace BPR.AspNetCore.Repository
         }
     }
 
-    public class BaseRepository<TEntity, TKey, TContext> : BaseRepository<TEntity, TContext>,
+    public abstract class BaseRepository<TEntity, TKey, TContext> : BaseRepository<TEntity, TContext>,
         IBaseRepository<TEntity, TKey>
         where TEntity : BaseEntity<TKey>
         where TContext : DbContext
     {
-        public BaseRepository(TContext database, ILogger<TEntity> logger) : base(database, logger)
+        protected BaseRepository(TContext database, ILogger<TEntity> logger) : base(database, logger)
         {
         }
 
