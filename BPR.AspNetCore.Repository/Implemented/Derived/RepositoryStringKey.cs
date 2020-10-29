@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using BPR.AspNetCore.Entity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace BPR.AspNetCore.Repository
 {
@@ -10,7 +11,7 @@ namespace BPR.AspNetCore.Repository
         where TEntity : BaseEntity<string>
         where TContext : DbContext
     {
-        public RepositoryStringKey(TContext database) : base(database)
+        public RepositoryStringKey(TContext database, ILogger<TEntity> logger) : base(database, logger)
         {
         }
     }
