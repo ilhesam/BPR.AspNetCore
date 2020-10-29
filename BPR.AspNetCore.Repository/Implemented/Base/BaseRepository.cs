@@ -25,7 +25,7 @@ namespace BPR.AspNetCore.Repository
             Logger = logger;
         }
 
-        public BprOperationResult<IQueryable<TEntity>> GetAll(bool tracking = false)
+        public virtual BprOperationResult<IQueryable<TEntity>> GetAll(bool tracking = false)
         {
             try
             {
@@ -39,7 +39,7 @@ namespace BPR.AspNetCore.Repository
             }
         }
 
-        public BprOperationResult<IQueryable<TEntity>> GetAll(Expression<Func<TEntity, bool>> expression,
+        public virtual BprOperationResult<IQueryable<TEntity>> GetAll(Expression<Func<TEntity, bool>> expression,
             bool tracking = false)
         {
             try
@@ -53,7 +53,7 @@ namespace BPR.AspNetCore.Repository
             }
         }
 
-        public BprOperationResult<IQueryable<TEntity>> GetAllAsTracking()
+        public virtual BprOperationResult<IQueryable<TEntity>> GetAllAsTracking()
         {
             try
             {
@@ -67,7 +67,7 @@ namespace BPR.AspNetCore.Repository
             }
         }
 
-        public BprOperationResult<IQueryable<TEntity>> GetAllAsNoTracking()
+        public virtual BprOperationResult<IQueryable<TEntity>> GetAllAsNoTracking()
         {
             try
             {
@@ -81,7 +81,7 @@ namespace BPR.AspNetCore.Repository
             }
         }
 
-        public BprOperationResult<IQueryable<TEntity>> GetAllAsTracking(Expression<Func<TEntity, bool>> expression)
+        public virtual BprOperationResult<IQueryable<TEntity>> GetAllAsTracking(Expression<Func<TEntity, bool>> expression)
         {
             try
             {
@@ -95,7 +95,7 @@ namespace BPR.AspNetCore.Repository
             }
         }
 
-        public BprOperationResult<IQueryable<TEntity>> GetAllAsNoTracking(Expression<Func<TEntity, bool>> expression)
+        public virtual BprOperationResult<IQueryable<TEntity>> GetAllAsNoTracking(Expression<Func<TEntity, bool>> expression)
         {
             try
             {
@@ -109,7 +109,7 @@ namespace BPR.AspNetCore.Repository
             }
         }
 
-        public async Task<BprOperationResult<TEntity>> GetOrNullAsync(Expression<Func<TEntity, bool>> expression,
+        public virtual async Task<BprOperationResult<TEntity>> GetOrNullAsync(Expression<Func<TEntity, bool>> expression,
             bool tracking = false)
         {
             try
@@ -126,7 +126,7 @@ namespace BPR.AspNetCore.Repository
             }
         }
 
-        public async Task<BprOperationResult<TEntity>> GetOrNullAsNoTrackingAsync(
+        public virtual async Task<BprOperationResult<TEntity>> GetOrNullAsNoTrackingAsync(
             Expression<Func<TEntity, bool>> expression)
         {
             try
@@ -148,7 +148,7 @@ namespace BPR.AspNetCore.Repository
             }
         }
 
-        public async Task<BprOperationResult<TEntity>> GetOrNullAsTrackingAsync(
+        public virtual async Task<BprOperationResult<TEntity>> GetOrNullAsTrackingAsync(
             Expression<Func<TEntity, bool>> expression)
         {
             try
@@ -170,7 +170,7 @@ namespace BPR.AspNetCore.Repository
             }
         }
 
-        public async Task<BprOperationResult<TEntity>> AddAsync(TEntity entity)
+        public virtual async Task<BprOperationResult<TEntity>> AddAsync(TEntity entity)
         {
             try
             {
@@ -184,7 +184,7 @@ namespace BPR.AspNetCore.Repository
             }
         }
 
-        public async Task<BprOperationResult> AddListAsync(IList<TEntity> entities)
+        public virtual async Task<BprOperationResult> AddListAsync(IList<TEntity> entities)
         {
             try
             {
@@ -198,7 +198,7 @@ namespace BPR.AspNetCore.Repository
             }
         }
 
-        public BprOperationResult Update(TEntity entity)
+        public virtual BprOperationResult Update(TEntity entity)
         {
             try
             {
@@ -212,7 +212,7 @@ namespace BPR.AspNetCore.Repository
             }
         }
 
-        public BprOperationResult UpdateList(IList<TEntity> entities)
+        public virtual BprOperationResult UpdateList(IList<TEntity> entities)
         {
             try
             {
@@ -226,7 +226,7 @@ namespace BPR.AspNetCore.Repository
             }
         }
 
-        public BprOperationResult<TEntity> Delete(TEntity entity)
+        public virtual BprOperationResult<TEntity> Delete(TEntity entity)
         {
             try
             {
@@ -240,7 +240,7 @@ namespace BPR.AspNetCore.Repository
             }
         }
 
-        public async Task<BprOperationResult<TEntity>> DeleteAsync(Expression<Func<TEntity, bool>> expression)
+        public virtual async Task<BprOperationResult<TEntity>> DeleteAsync(Expression<Func<TEntity, bool>> expression)
         {
             try
             {
@@ -261,7 +261,7 @@ namespace BPR.AspNetCore.Repository
             }
         }
 
-        public BprOperationResult DeleteList(IList<TEntity> entities)
+        public virtual BprOperationResult DeleteList(IList<TEntity> entities)
         {
             try
             {
@@ -275,7 +275,7 @@ namespace BPR.AspNetCore.Repository
             }
         }
 
-        public async Task<BprOperationResult> DeleteListAsync(Expression<Func<TEntity, bool>> expression)
+        public virtual async Task<BprOperationResult> DeleteListAsync(Expression<Func<TEntity, bool>> expression)
         {
             try
             {
@@ -296,7 +296,7 @@ namespace BPR.AspNetCore.Repository
             }
         }
 
-        public async Task<BprOperationResult<bool>> IsExistsAsync(Expression<Func<TEntity, bool>> expression)
+        public virtual async Task<BprOperationResult<bool>> IsExistsAsync(Expression<Func<TEntity, bool>> expression)
         {
             try
             {
@@ -310,7 +310,7 @@ namespace BPR.AspNetCore.Repository
             }
         }
 
-        public async Task<BprOperationResult<int>> SaveChangesAsync()
+        public virtual async Task<BprOperationResult<int>> SaveChangesAsync()
         {
             try
             {
@@ -334,7 +334,7 @@ namespace BPR.AspNetCore.Repository
         {
         }
 
-        public async Task<BprOperationResult<TEntity>> GetByIdAsync(TKey id, bool tracking = false)
+        public virtual async Task<BprOperationResult<TEntity>> GetByIdAsync(TKey id, bool tracking = false)
         {
             try
             {
@@ -348,7 +348,7 @@ namespace BPR.AspNetCore.Repository
             }
         }
 
-        public async Task<BprOperationResult<TEntity>> GetByIdAsNoTrackingAsync(TKey id)
+        public virtual async Task<BprOperationResult<TEntity>> GetByIdAsNoTrackingAsync(TKey id)
         {
             try
             {
@@ -362,7 +362,7 @@ namespace BPR.AspNetCore.Repository
             }
         }
 
-        public async Task<BprOperationResult<TEntity>> GetByIdAsTrackingAsync(TKey id)
+        public virtual async Task<BprOperationResult<TEntity>> GetByIdAsTrackingAsync(TKey id)
         {
             try
             {
@@ -376,7 +376,7 @@ namespace BPR.AspNetCore.Repository
             }
         }
 
-        public async Task<BprOperationResult<TEntity>> DeleteAsync(TKey id)
+        public virtual async Task<BprOperationResult<TEntity>> DeleteAsync(TKey id)
         {
             try
             {
@@ -390,7 +390,7 @@ namespace BPR.AspNetCore.Repository
             }
         }
 
-        public async Task<BprOperationResult> DeleteListAsync(IList<TKey> ids)
+        public virtual async Task<BprOperationResult> DeleteListAsync(IList<TKey> ids)
         {
             try
             {
@@ -404,7 +404,7 @@ namespace BPR.AspNetCore.Repository
             }
         }
 
-        public async Task<BprOperationResult<bool>> IsExistsAsync(TKey id)
+        public virtual async Task<BprOperationResult<bool>> IsExistsAsync(TKey id)
         {
             try
             {
