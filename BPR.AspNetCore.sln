@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BPR.AspNetCore.Repository",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BPR.AspNetCore.EF", "Source\BPR.AspNetCore.EF\BPR.AspNetCore.EF.csproj", "{02369117-F48C-41F8-A123-4074C1FC7907}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BPR.AspNetCore.Service", "BPR.AspNetCore.Service\BPR.AspNetCore.Service.csproj", "{4B2D4F7B-7053-42BF-97D2-0F4520B6CE56}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BPR.AspNetCore.Service", "Source\BPR.AspNetCore.Service\BPR.AspNetCore.Service.csproj", "{4B2D4F7B-7053-42BF-97D2-0F4520B6CE56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
