@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using BPR.AspNetCore.Entity;
 
-namespace BPR.AspNetCore.Service.Base
+namespace BPR.AspNetCore.Service
 {
     public interface IBprMapper<out TEntity, out TEntityAddDto, out TEntityEditDto, out TEntityDto, out TEntitiesDto>
         where TEntity : BaseEntity
