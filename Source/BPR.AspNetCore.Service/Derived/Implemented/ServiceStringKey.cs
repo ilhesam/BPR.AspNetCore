@@ -16,7 +16,7 @@ namespace BPR.AspNetCore.Service
         where TEntityDto : BaseEntityDto<string>
         where TEntitiesDto : BaseEntitiesDto<TEntityDto>, new()
     {
-        protected ServiceStringKey(IBaseRepository<TEntity> repository, ILogger<TEntity> logger) : base(repository, logger)
+        protected ServiceStringKey(IRepositoryStringKey<TEntity> repository, ILogger<TEntity> logger) : base(repository, logger)
         {
         }
     }
