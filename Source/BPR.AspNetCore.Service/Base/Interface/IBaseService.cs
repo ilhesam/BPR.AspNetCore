@@ -20,13 +20,13 @@ namespace BPR.AspNetCore.Service
         Task<BprOperationResult<TEntitiesDto>> GetAllAsync(bool tracking = false);
         BprOperationResult<IQueryable<TEntityDto>> GetAll(bool tracking = false);
 
-        BprOperationResult<IQueryable<TEntityDto>> GetAll(Expression<Func<TEntityDto, bool>> expression,
+        BprOperationResult<IQueryable<TEntityDto>> GetAll(Expression<Func<TEntity, bool>> expression,
             bool tracking = false);
 
         BprOperationResult<IQueryable<TEntityDto>> GetAllAsTracking();
-        BprOperationResult<IQueryable<TEntityDto>> GetAllAsNoTrackingTracking();
-        BprOperationResult<IQueryable<TEntityDto>> GetAllAsTracking(Expression<Func<TEntityDto, bool>> expression);
-        BprOperationResult<IQueryable<TEntityDto>> GetAllAsNoTracking(Expression<Func<TEntityDto, bool>> expression);
+        BprOperationResult<IQueryable<TEntityDto>> GetAllAsNoTracking();
+        BprOperationResult<IQueryable<TEntityDto>> GetAllAsTracking(Expression<Func<TEntity, bool>> expression);
+        BprOperationResult<IQueryable<TEntityDto>> GetAllAsNoTracking(Expression<Func<TEntity, bool>> expression);
 
         // Get Entity
         Task<BprOperationResult<TEntityDto>> GetOrNullAsync(Expression<Func<TEntity, bool>> expression,
@@ -48,7 +48,7 @@ namespace BPR.AspNetCore.Service
         BprOperationResult UpdateList(IList<TEntityEditDto> list);
 
         // Delete Entity
-        BprOperationResult<TEntityDto> Delete(Expression<Func<TEntity, bool>> expression);
+        Task<BprOperationResult<TEntityDto>> DeleteAsync(Expression<Func<TEntity, bool>> expression);
 
         // Delete Entities
         Task<BprOperationResult> DeleteListAsync(Expression<Func<TEntity, bool>> expression);
