@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>Hesam Asnaashari</Authors>
+    <Description>Provides base services for ASP.NET Core Web applications</Description>
+    <RepositoryUrl>https://github.com/ilhesam/BPR.AspNetCore</RepositoryUrl>
+    <PackageProjectUrl>https://bpr.ilhesam.ir</PackageProjectUrl>
+    <PackageTags>BPR BaseProject Service BaseService</PackageTags>
+    <PackageReleaseNotes>First release</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

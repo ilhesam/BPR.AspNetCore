@@ -2,6 +2,12 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Authors>Hesam Asnaashari</Authors>
+    <Description>Provides base DbContext, DbSet and EntityTypeConfigurations for ASP.NET Core Web applications</Description>
+    <RepositoryUrl>https://github.com/ilhesam/BPR.AspNetCore</RepositoryUrl>
+    <PackageProjectUrl>https://bpr.ilhesam.ir</PackageProjectUrl>
+    <PackageTags>BPR BaseProject DbContext DbSet EntityTypeConfiguration BaseDbContext BaseDbSet BaseEntityTypeConfiguration</PackageTags>
+    <PackageReleaseNotes>First release</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
